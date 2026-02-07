@@ -1,0 +1,40 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pip install -r requirements.txt"
+  },
+  "deploy": {
+    "startCommand": "python main.py",
+    "healthcheckPath": "/health",
+    "restartPolicyType": "ALWAYS",
+    "restartPolicyMaxRetries": 10,
+    "sleepApplication": false
+  },
+  "variables": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token from @BotFather",
+      "default": ""
+    },
+    "TELEGRAM_CHAT_ID": {
+      "description": "Your chat ID from @userinfobot",
+      "default": ""
+    },
+    "CHECK_INTERVAL_MINUTES": {
+      "description": "Minutes between checks (2-10)",
+      "default": "5"
+    },
+    "ENABLE_PROXY_ROTATION": {
+      "description": "Enable proxy rotation (true/false)",
+      "default": "false"
+    },
+    "LOG_LEVEL": {
+      "description": "Log level (INFO/WARNING/ERROR)",
+      "default": "INFO"
+    },
+    "SHEIN_COUNTRY": {
+      "description": "Shein country (IN/US/UK/AE)",
+      "default": "IN"
+    }
+  }
+}
