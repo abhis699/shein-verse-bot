@@ -169,7 +169,7 @@ class TelegramManager:
 • Product images
 
 🛡️ <b>Protection:</b> Advanced anti-blocking
-🕒 <b>Check Interval:</b> {Config.CHECK_INTERVAL_MINUTES} minutes
+🕒 <b>Check Interval:</b> {Config.CHECK_INTERVAL_SECONDS} sec
 
 🎯 <i>Ready to monitor stock...</i>
 """
