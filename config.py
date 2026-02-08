@@ -17,7 +17,7 @@ class Config:
     SHEIN_VERSE_URL = f"{SHEIN_BASE_URL}/c/sverse-5939-37961"
     
     # Bot Settings
-    CHECK_INTERVAL_MINUTES = int(os.getenv('CHECK_INTERVAL_MINUTES', '1'))
+    CHECK_INTERVAL_MINUTES = int(os.getenv('CHECK_INTERVAL_SECONDS', '20'))
     MAX_RETRIES = 3
     REQUEST_TIMEOUT = 30
     
